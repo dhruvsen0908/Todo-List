@@ -1,0 +1,16 @@
+@media (min-width: 768px) {
+    .container--xs {
+        max-width: 570px;
+    }
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 14px;
+    color: #2d2d2d;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}

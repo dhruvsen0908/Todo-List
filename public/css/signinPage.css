@@ -1,0 +1,26 @@
+@media (min-width: 768px) {
+    .container--mini {
+        max-width: 380px;
+    }
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 14px;
+    color: #2d2d2d;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.text-gray-soft {
+    color: #838e95 !important;
+}
+
+small,
+.small {
+    font-size: 80%;
+    font-weight: normal;
+}

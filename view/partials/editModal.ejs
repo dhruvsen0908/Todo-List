@@ -1,0 +1,43 @@
+<!-- Modal -->
+<div class="modal fade" id="editTaskModal<%= id %>" tabindex="-1" aria-labelledby="editTaskModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="editTaskModalLabel">Edit Task</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/edit/<%= id %>?_method=PUT" method="post">
+                    <div class="mb-3">
+                        <label for="editTaskFormTitle" class="form-label text-dark">Title:</label>
+                        <input type="text" class="form-control" id="editTaskFormTitle" value="<%= title %>"
+                            name="title">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="editTaskFormDescription" class="form-label text-dark">Description:</label>
+                        <input type="text" class="form-control" id="editTaskFormDescription" value="<%= description %>"
+                            name="description">
+                    </div>
+                    <div class="mb-3">
+                        <label for="editTaskFormPriority" class="form-label text-dark">Priority:</label>
+                        <select class="form-select  me-sm-2 me-sm-2 mb-2 mb-sm-auto" aria-label="Default select"
+                            name="priority" id="editTaskFormPriority">
+                            <option disabled>Select Priority</option>
+                            <option <% if(priority=='low' ){ %>selected<% } %> value="low">Low</option>
+                            <option <% if(priority=='medium' ){ %>selected<% } %> value="medium">Medium</option>
+                            <option <% if(priority=='high' ){ %>selected<% } %> value="high">High</option>
+                        </select>
+                    </div>
+
+                    <div class="modal-footer px-0 pb-0">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
